@@ -1,0 +1,21 @@
+{
+	"modListVersion": 2,
+	"modList": [{
+		"modid": "gtpoc",
+		"name": "GTPerfectOverclock",
+		"description": "GTNH 2.8.4 专用：将全部格雷机器改为 EBF 式无损超频（时间÷4/级，总耗能不变）。",
+		"version": "0.1.0",
+		"mcversion": "1.7.10",
+		"url": "",
+		"updateUrl": "",
+		"authorList": ["lelqwq"],
+		"credits": "",
+		"logoFile": "",
+		"screenshots": [],
+		"parent": "",
+		"requiredMods": ["gregtech"],
+		"dependencies": ["gregtech"],
+		"dependants": [],
+		"useDependencyInformation": false
+	}]
+}

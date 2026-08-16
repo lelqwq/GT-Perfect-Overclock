@@ -1,0 +1,13 @@
+/*
+ * 在此添加依赖。支持的配置：
+ *  - api("group:name:version:classifier"): 本 mod 的公开 API 中使用了该依赖的类型。
+ *       对于依赖本 mod 的 mod 而言，编译期与运行期均可用。
+ *  - implementation / compileOnly / compileOnlyApi / runtimeOnly 等，见 GTNH 模板说明。
+ *
+ * 本 mod 仅 Mixin gregtech.api.util.OverclockCalculator，编译期只需要 GT5U 本体。
+ * UniMixins 会因 gradle.properties 中 usesMixins = true 被 GTNH 构建脚本自动引入，无需手动声明。
+ */
+dependencies {
+    // GTNH 2.8.4 对应版本（本 mod 只适配 2.8.4）
+    api("com.github.GTNewHorizons:GT5-Unofficial:5.09.51.476") { transitive = false }
+}
