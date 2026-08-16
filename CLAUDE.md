@@ -51,5 +51,5 @@ GTNH 2.8.4 的 GT5U（5.09.51.476）已把所有超频计算收敛到 `gregtech.
 
 - v0.1.0 首次实机测试暴露 mixin 描述符 bug（`CallbackInfo` → `CallbackInfoReturnable<...>`），已修复并重建 jar（16:20），服务端/客户端崩溃同源
 - 实测发现：用户 2.8.4 实例的 GT5U 实际为 **5.09.51.482**（`gregtech-5.09.51.482.jar`），比编译目标 476 新；注入目标方法在 482 中均存在（Mixin 方法解析成功后才报描述符错误）。是否把编译依赖对齐到 482 待定
-- 仓库已 git init（main 分支），**无任何提交**
+- 已推送 GitHub 远程仓库（`git@github.com:lelqwq/GT-Perfect-Overclock.git`，main 分支）
 - 等待用户游戏内复测，验证点：单块机 NEI 时间÷4/总耗能不变、多方块（热解炉）、装配线不崩、EBF 行为不变、gtpoc.cfg 正常生成
