@@ -10,4 +10,7 @@
 dependencies {
     // GTNH 2.8.4 对应版本（本 mod 只适配 2.8.4）
     api("com.github.GTNewHorizons:GT5-Unofficial:5.09.51.476") { transitive = false }
+    // GT5U 476 的 API 引用了 GTNHLib（如 IGregTechTileEntity 的父接口），仅编译期需要；
+    // 运行时由 2.8.4 客户端/服务端自带（版本取自 GT5U pom，实机为 0.7.10，API 兼容）
+    compileOnly("com.github.GTNewHorizons:GTNHLib:0.6.37")
 }
