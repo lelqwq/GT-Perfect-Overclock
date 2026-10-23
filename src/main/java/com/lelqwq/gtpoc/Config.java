@@ -14,5 +14,8 @@ public final class Config {
     /** 采矿场：挖速 ×4/档，耗电保持原版 —— 一分电一分速度。默认 true。 */
     public static boolean enableLosslessMiner = true;
 
+    /** 工业蜂箱：速度升级 ×4/级，同等级耗电保持原版。默认 true。 */
+    public static boolean enableLosslessApiary = true;
+
     private Config() {}
 }

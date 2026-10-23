@@ -66,6 +66,11 @@ public class GTPerfectOverclock {
             Configuration.CATEGORY_GENERAL,
             true,
             "采矿场无损化：挖速 ×4/档，耗电保持原版 —— 一分电一分速度");
+        Config.enableLosslessApiary = config.getBoolean(
+            "enableLosslessApiary",
+            Configuration.CATEGORY_GENERAL,
+            true,
+            "工业蜂箱无损化：速度升级 ×4/级，同等级 EU/t 保持原版；繁殖最低 1 tick");
         // 速度表在 GT5U preInit（机器注册）之后、本 mod preInit 时改写；快照原版表供开关关闭时还原
         if (originalAccelerate == null) {
             originalAccelerate = MTEWorldAccelerator.mAccelerateStatic.clone();
