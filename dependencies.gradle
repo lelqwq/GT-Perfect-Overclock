@@ -4,13 +4,13 @@
  *       对于依赖本 mod 的 mod 而言，编译期与运行期均可用。
  *  - implementation / compileOnly / compileOnlyApi / runtimeOnly 等，见 GTNH 模板说明。
  *
- * 本 mod 仅 Mixin gregtech.api.util.OverclockCalculator，编译期只需要 GT5U 本体。
+ * 超频计算器与工业蜂箱 Mixin 的编译依赖为 GT5U 本体。
  * UniMixins 会因 gradle.properties 中 usesMixins = true 被 GTNH 构建脚本自动引入，无需手动声明。
  */
 dependencies {
-    // GTNH 2.8.4 对应版本（本 mod 只适配 2.8.4）
-    api("com.github.GTNewHorizons:GT5-Unofficial:5.09.51.476") { transitive = false }
-    // GT5U 476 的 API 引用了 GTNHLib（如 IGregTechTileEntity 的父接口），仅编译期需要；
+    // GTNH 2.8.4 实机使用版本（本 mod 只适配 2.8.4）
+    api("com.github.GTNewHorizons:GT5-Unofficial:5.09.51.482") { transitive = false }
+    // GT5U 的 API 引用了 GTNHLib（如 IGregTechTileEntity 的父接口），仅编译期需要；
     // 运行时由 2.8.4 客户端/服务端自带（版本取自 GT5U pom，实机为 0.7.10，API 兼容）
     compileOnly("com.github.GTNewHorizons:GTNHLib:0.6.37")
 }
