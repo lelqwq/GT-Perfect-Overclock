@@ -4,7 +4,7 @@ GTNH 2.9.0 专用小 mod：把全部格雷机器改为 EBF 式无损超频。作
 
 ## 一句话原理
 
-本项目编译和适配目标为 GTNH 2.9.0 实机使用的 GT5U **5.09.54.265**（2.8.4 / 5.09.51.482 的适配保留在 v1.2.0 标签）。常规配方超频集中在 `gregtech.api.util.OverclockCalculator`，工业蜂箱等特殊机器另行适配。
+本项目编译和适配目标为 GTNH 2.9.0 实机使用的 GT5U **5.09.54.265**（2.8.4 / 5.09.51.482 的适配保留在 v1.1.0 标签）。常规配方超频集中在 `gregtech.api.util.OverclockCalculator`，工业蜂箱等特殊机器另行适配。
 本 mod 用 Mixin 在该类的两个计算入口把**小于 4 的时长因子提升为 4.0**：
 每级超频 时间÷4、峰值功率×4、单配方总耗能不变（EBF 式无损语义）。
 
@@ -51,7 +51,7 @@ GTNH 2.9.0 专用小 mod：把全部格雷机器改为 EBF 式无损超频。作
 
 ## 构建
 
-- `./gradlew build` → 产物 `build/libs/gt-perfect-overclock-1.2.1.jar`（jar 名由 build.gradle.kts 的 `base.archivesName` 控制，modid 仍为 gtpoc）
+- `./gradlew build` → 产物 `build/libs/gt-perfect-overclock-1.2.0.jar`（jar 名由 build.gradle.kts 的 `base.archivesName` 控制，modid 仍为 gtpoc）
 - 改完代码先 `./gradlew spotlessApply`（import 顺序/行尾符/折行自动修复），否则 build 会被 spotlessJavaCheck 卡住
 - 构建坑：`gradle.properties` 的 `mixinsPackage` 是**相对 modGroup 的路径**（= `mixins`），不是完整包名；写全路径会导致插件报 "Could not resolve mixinsPackage"
 - GT5U 编译依赖 5.09.54.265（dependencies.gradle，transitive=false）；UniMixins 由 GTNH 构建脚本因 `usesMixins = true` 自动引入，2.9.0 客户端自带
@@ -66,7 +66,7 @@ GTNH 2.9.0 专用小 mod：把全部格雷机器改为 EBF 式无损超频。作
 
 ## 当前状态（2026-11-06）
 
-- 主分支：适配 GTNH 2.9.0 / GT5U 5.09.54.265，v1.2.1
+- 主分支：适配 GTNH 2.9.0 / GT5U 5.09.54.265，v1.2.0
 - 2026-11-06：超频规则改为「只提升 <4 的因子」；蜂箱补 UI 显示注入（`getAcceleration`）、第 5 级起产量补偿、繁殖注入自校验；构建通过，**待实机实测**
 - 实机验证清单：蜂箱 GUI 显示 4^等级而耗电提示不变；电弧炉 YBCO 仍为 6、钨电极（因子 1）会被提升到 4；聚变因子 2 → 4；普通机器无损超频
 - **v1.1.0 已实测通过**（WA 加速 ×4/档、采矿场挖速 ×4/档，耗电均保持原版；开关还原正常）
